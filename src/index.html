@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 页面编码 -->
+  <meta charset="utf-8">
+  <!-- 视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 关键字 -->
+  <!-- <meta name="keywords" contect="未来集市"> -->
+  <!-- <meta name="Description" contect="直播"> -->
+
+  <!-- 设置页面不缓存（可能不生效，不要依赖此设置作为缓存配置） -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-Control" content="no-store, must-revalidate">
+  <meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+  <meta http-equiv="expires" content="0">
+
+  <!--删除默认的苹果工具栏和菜单栏（默认展示yes）-->
+  <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+  <!--顶部状态栏背景色-->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!--禁止识别电话号码,邮箱-->
+  <meta name="format-detection" content="telephone=no,email=no">
+  <!-- 一些国内webkit内核浏览器默认使用极速模式 -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- x5内核浏览器强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  <!-- windows phone 点击无高光 -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- 禁止百度转码 -->
+  <meta http-equiv="cache-control" content="no-siteapp" />
+
+  <!-- DNS预解析 -->
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <!-- <link rel="dns-prefetch" href="" /> -->
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="app"></div>
+</body>
+
+</html>

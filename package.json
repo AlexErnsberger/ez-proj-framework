@@ -1,0 +1,119 @@
+{
+  "name": "wljs-h5live-share",
+  "version": "1.0.0",
+  "description": "未来集市H5直播分享",
+  "private": true,
+  "scripts": {
+    "dev:dev": "cross-env BUILD_ARGVS=dev webpack-dev-server --config=config/webpack.config.js --open",
+    "dev:uat": "cross-env BUILD_ARGVS=uat webpack-dev-server --config=config/webpack.config.js --open",
+    "dev:fat": "cross-env BUILD_ARGVS=fat webpack-dev-server --config=config/webpack.config.js --open",
+    "dev:lpt": "cross-env BUILD_ARGVS=lpt webpack-dev-server --config=config/webpack.config.js --open",
+    "dev:pro": "cross-env BUILD_ARGVS=pro webpack-dev-server --config=config/webpack.config.js --open",
+    "build:dev": "cross-env BUILD_ARGVS=dev webpack --config=config/webpack.config.js --progress --colors",
+    "build:uat": "cross-env BUILD_ARGVS=uat webpack --config=config/webpack.config.js --progress --colors",
+    "build:fat": "cross-env BUILD_ARGVS=fat webpack --config=config/webpack.config.js --progress --colors",
+    "build:lpt": "cross-env BUILD_ARGVS=lpt webpack --config=config/webpack.config.js --progress --colors",
+    "build:pro": "cross-env BUILD_ARGVS=pro webpack --config=config/webpack.config.js --progress --colors",
+    "prettier": "prettier --write src/**/*.{js,scss}",
+    "lint:js": "eslint --ext .js src",
+    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "7.x",
+    "@babel/preset-react": "^7.7.0",
+    "autoprefixer": "^9.7.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.12.2",
+    "cache-loader": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-config-react-app": "5.2.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-flowtype": "4.6.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "file-loader": "^5.0.2",
+    "happypack": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-px-to-viewport": "^1.1.0",
+    "prettier": "1.19.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "sass-loader": "^8.0.2",
+    "speed-measure-webpack-plugin": "^1.3.1",
+    "style-loader": "^1.0.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-webpack-plugin": "^1.0.3",
+    "terser-webpack-plugin": "^2.2.1",
+    "url-loader": "^3.0.0",
+    "vconsole": "^3.3.4",
+    "webpack": "^4.8.3",
+    "webpack-build-notifier": "^2.0.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dashboard": "^3.2.0",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.6",
+    "antd-mobile": "^2.3.1",
+    "core-js": "^3.5.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --ext .js --fix",
+      "yarn prettier",
+      "git add"
+    ],
+    "**/*.scss": [
+      "stylelint --syntax scss",
+      "yarn prettier",
+      "git add"
+    ],
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
