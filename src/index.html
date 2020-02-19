@@ -7,7 +7,7 @@
   <!-- 视口 -->
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!-- 关键字 -->
-  <!-- <meta name="keywords" contect="未来集市"> -->
+  <meta name="keywords" contect="未来集市">
   <!-- <meta name="Description" contect="直播"> -->
 
   <!-- 设置页面不缓存（可能不生效，不要依赖此设置作为缓存配置） -->
@@ -49,7 +49,9 @@
 
   <!-- DNS预解析 -->
   <meta http-equiv="x-dns-prefetch-control" content="on" />
-  <!-- <link rel="dns-prefetch" href="" /> -->
+  <link rel="dns-prefetch" href="https://lives.m.weilaijishi.cn" />
+  <link rel="dns-prefetch" href="https://api.weilaijishi.cn" />
+  <link rel="dns-prefetch" href="https://imgs.weilaijishi.cn" />
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
@@ -57,7 +59,13 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <div id="app"></div>
+  <div id="root"></div>
+  <!-- <script src="https://cdn.ronghub.com/RongIMLib-2.5.0.min.js"></script>
+  <script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.3.2.js" charset="utf-8"></script> -->
+  <script src="//imgs.weilaijishi.cn/static/live/RongIMLib-2.5.0.min.js"></script>
+  <script src="//imgs.weilaijishi.cn/static/live/sensorsdata.min.js"></script>
+  <script src="//imgs.weilaijishi.cn/static/live/TcPlayer-2.3.2.js" charset="utf-8"></script>
+  <script src="//imgs.weilaijishi.cn/static/live/svga.min.js"></script>
 </body>
 
 </html>

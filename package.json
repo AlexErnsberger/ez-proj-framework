@@ -1,19 +1,9 @@
 {
-  "name": "wljs-h5live-share",
-  "version": "1.0.0",
-  "description": "未来集市H5直播分享",
-  "private": true,
+  "name": "ez-coop-framework",
+  "version": "0.0.1",
   "scripts": {
-    "dev:dev": "cross-env BUILD_ARGVS=dev webpack-dev-server --config=config/webpack.config.js --open",
-    "dev:uat": "cross-env BUILD_ARGVS=uat webpack-dev-server --config=config/webpack.config.js --open",
-    "dev:fat": "cross-env BUILD_ARGVS=fat webpack-dev-server --config=config/webpack.config.js --open",
-    "dev:lpt": "cross-env BUILD_ARGVS=lpt webpack-dev-server --config=config/webpack.config.js --open",
-    "dev:pro": "cross-env BUILD_ARGVS=pro webpack-dev-server --config=config/webpack.config.js --open",
-    "build:dev": "cross-env BUILD_ARGVS=dev webpack --config=config/webpack.config.js --progress --colors",
-    "build:uat": "cross-env BUILD_ARGVS=uat webpack --config=config/webpack.config.js --progress --colors",
-    "build:fat": "cross-env BUILD_ARGVS=fat webpack --config=config/webpack.config.js --progress --colors",
-    "build:lpt": "cross-env BUILD_ARGVS=lpt webpack --config=config/webpack.config.js --progress --colors",
-    "build:pro": "cross-env BUILD_ARGVS=pro webpack --config=config/webpack.config.js --progress --colors",
+    "dev:pro": "cross-env NODE_ENV=development BUILD_ARGVS=pro webpack-dev-server --config=config/webpack.config.js",
+    "build:pro": "cross-env NODE_ENV=production BUILD_ARGVS=pro webpack --config=config/webpack.config.js --progress --colors",
     "prettier": "prettier --write src/**/*.{js,scss}",
     "lint:js": "eslint --ext .js src",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax scss"
@@ -27,6 +17,7 @@
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "7.x",
     "@babel/preset-react": "^7.7.0",
+    "autodll-webpack-plugin": "^0.4.2",
     "autoprefixer": "^9.7.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
@@ -49,6 +40,7 @@
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.1",
+    "image-webpack-loader": "^6.0.0",
     "lint-staged": "^10.0.7",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
@@ -70,6 +62,7 @@
     "vconsole": "^3.3.4",
     "webpack": "^4.8.3",
     "webpack-build-notifier": "^2.0.0",
+    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.9",
     "webpack-dashboard": "^3.2.0",
     "webpack-dev-server": "^3.1.4",
@@ -91,24 +84,24 @@
     "src/**/*.js": [
       "eslint --ext .js --fix",
       "yarn prettier",
-      "git add"
+      "git add ."
     ],
     "**/*.scss": [
       "stylelint --syntax scss",
       "yarn prettier",
-      "git add"
+      "git add ."
     ],
     "*.{js,css,json,md}": [
       "prettier --write",
-      "git add"
+      "git add ."
     ],
     "*.js": [
       "eslint --fix",
-      "git add"
+      "git add ."
     ],
     "*.css": [
       "stylelint --fix",
-      "git add"
+      "git add ."
     ]
   },
   "husky": {

@@ -7,10 +7,12 @@ const resolveApp = relativePath => {
 }
 
 module.exports = {
+  // appIndexJs: resolveApp('src/common/index.js'),
   appHtml: resolveApp('src/index.html'),
   appIndexJs: resolveApp('src/index.js'),
   appBuild: resolveApp('dist'),
+  appDll: resolveApp('dist/statics/dll'),
   appSrc: resolveApp('src'),
-  // appFavicon: resolveApp('favicon.ico'),
   appPostCssConfig: resolveApp('postcss.config.js'),
+  appModules: resolveApp('node_modules'),
 }
